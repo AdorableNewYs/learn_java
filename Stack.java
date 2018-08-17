@@ -30,6 +30,9 @@ public class Stack<Item> implements Iterable<Item>{
         top.next = oldTop;
     }
 
+     //1.3.7
+    public Item peek(){ return top.item; }
+
     public int size(){ return N; }
 
     public Iterator<Item> iterator(){
