@@ -35,6 +35,7 @@ public class RandomBag<Item> implements Iterable<Item> {
             for(int i = 0; i < N;i++){
                 rand[i] = i;
             }
+            //将数组元素随机排序
             StdRandom.shuffle(rand);
         }
 
