@@ -10,6 +10,15 @@ public class Queue<Item> implements Iterable<Item> {
     private Node first;
     private Node last;
     private int N;
+    
+    
+    public Queue(){ }
+
+    public Queue(Queue<Item> q){
+        for(Item s : q){
+            this.enQueue(s);
+        }
+    }
 
     public boolean isEmpty(){ return first == null; }
 
