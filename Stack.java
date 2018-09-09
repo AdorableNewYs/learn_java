@@ -10,6 +10,14 @@ public class Stack<Item> implements Iterable<Item>{
     private Node top;
     private int N;
 
+    public Stack(){}
+
+    public Stack(Stack<Item> oldStack){
+        Stack<Item> midS = new Stack<>();
+        for(Item s : oldStack) midS.push(s);
+        for(Item s : midS) this.push(s);
+    }
+    
     public boolean isEmpty(){return top == null;}
 
     public Item pop(){
